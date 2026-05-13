@@ -153,25 +153,6 @@ def download_file(dirname, format):
     else:
         abort(400)
 
-@app.route('/cost/<dirname>')
-def get_cost_info(dirname):
-    """Get cost information for a translated PDF."""
-    try:
-        cost_summary_path = os.path.join(DATA_DIR, dirname, 'cost_summary.json')
-        
-        if not os.path.exists(cost_summary_path):
-            return jsonify({'error': 'Cost information not available'}), 404
-        
-        with open(cost_summary_path, 'r', encoding='utf-8') as f:
-            import json
-            cost_data = json.load(f)
-        
-        return jsonify(cost_data), 200
-        
-    except Exception as e:
-        logger.error(f"Error retrieving cost info for {dirname}: {str(e)}")
-        return jsonify({'error': 'Failed to retrieve cost information'}), 500
-
 @app.route('/original/<dirname>')
 def view_original_pdf(dirname):
     """Serve the original PDF file for viewing/downloading."""
