@@ -2,7 +2,7 @@
 
 A production-ready web application that translates PDF documents using Google's Gemini AI. The application extracts text from PDFs, translates it to English while preserving formatting, and provides multiple download formats.
 
-![screenshot](image.png)
+
 
 ## Features
 
