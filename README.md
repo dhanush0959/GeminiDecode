@@ -35,7 +35,7 @@ A production-ready web application that translates PDF documents using Google's 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/lklic/gemeni-large-pdf-translator.git
+   git clone https://github.com/dhanush0959/GeminiDecode.git
    cd translation-agent
    ```
 
